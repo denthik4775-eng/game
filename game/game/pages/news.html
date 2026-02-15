@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Новости - Компьютерные клубы Шрек</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="icon" href="../images/icon.ico" type="image/x-icon">
+</head>
+<body class="light-theme">
+  <header>
+    <div class="header-container">
+      <!-- Логотип или изображение -->
+      <div class="logo">
+        <img src="../images/logo.png" alt="Логотип клуба" class="logo-image">
+      </div>
+      <!-- Название и навигация -->
+      <div class="header-content">
+        <h1>Компьютерные клубы "Шрек"</h1>
+        <nav>
+          <ul class="navigation">
+            <li><a href="main.html">Главная</a></li>
+            <li><a href="tariffs.html">Тарифы</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="login.html">Авторизация</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Кнопка смены темы -->
+      <button id="theme-toggle">Сменить тему</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2>Последние новости</h2>
+    <div class="news-container">
+      <!-- Блок новости 1 -->
+      <div class="news-block" data-news="1">
+        <img src="../images/news1.png" alt="Обновление ПК" class="news-image">
+        <h3>Обновление ПК</h3>
+      </div>
+      <!-- Блок новости 2 -->
+      <div class="news-block" data-news="2">
+        <img src="../images/news2.png" alt="Скидки на тарифы" class="news-image">
+        <h3>Скидки на тарифы</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Затемнение фона -->
+  <div id="modal-overlay" class="modal-overlay"></div>
+
+  <!-- Модальное окно для новостей -->
+  <div class="modal" id="news-modal">
+    <div class="modal-content">
+      <span class="modal-close" id="modal-close">&times;</span>
+      <h3 id="modal-title"></h3>
+      <p id="modal-content"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Есть вопросы? Напишите нам:</p>
+    <form action="../send_mail.php" method="POST">
+      <input type="email" name="email" placeholder="Ваш email" required>
+      <textarea name="message" placeholder="Ваш вопрос" required></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+    <p>© 2025 Компьютерные клубы "Шрек"</p>
+  </footer>
+
+  <script src="../scripts/theme.js"></script>
+  <script src="../scripts/news.js"></script>
+</body>
+</html>

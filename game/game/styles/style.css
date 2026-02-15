@@ -1,0 +1,301 @@
+/* Общие стили для сайта */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Кнопки */
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Темы */
+.light-theme {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.dark-theme {
+  background-color: #333;
+  color: #f9f9f9;
+}
+
+/* Модальные окна */
+.modal {
+  display: none; /* Скрываем модальное окно по умолчанию */
+  position: fixed; /* Фиксируем окно относительно экрана */
+  top: 50%; /* Центрируем по вертикали */
+  left: 50%; /* Центрируем по горизонтали */
+  transform: translate(-50%, -50%); /* Смещаем на половину ширины и высоты */
+  z-index: 1000; /* Устанавливаем высокий z-index, чтобы окно было поверх всего */
+  background-color: white; /* Белый фон для модального окна */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для модального окна */
+  border-radius: 10px; /* Скруглённые углы */
+  width: 80%; /* Ширина модального окна */
+  max-width: 500px; /* Максимальная ширина */
+  max-height: 500px; /* Максимальная ширина */
+  padding: 20px; /* Внутренний отступ */
+  text-align: center; /* Центрируем текст */
+}
+
+.modal-header {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.modal-close {
+  cursor: pointer;
+  color: red;
+  float: right;
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: red;
+}
+
+.modal-overlay {
+  display: none; /* Скрываем затемнение по умолчанию */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный чёрный фон */
+  z-index: 999; /* Затемнение должно быть под модальным окном */
+}
+
+.modal-content h3 {
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  line-height: 1.6;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: red;
+}
+
+/* Стили для навигации */
+nav {
+  margin-top: 10px;
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation li {
+  margin: 0 15px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navigation a:hover {
+  color: #FFD700; /* Золотой цвет при наведении */
+}
+
+/* Стили для личного кабинета */
+.profile-info {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/* Стили для формы */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+form input, form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.tariff {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.tariff-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Стили для новостей */
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.news-block {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-block:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.news-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.news-block h3 {
+  text-align: center;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  margin: 0;
+}
+
+.form-group:first-child {
+  margin-top: 100px;
+}
+
+.login-footer {
+  margin-top: 120px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.logo-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.header-content {
+  flex-grow: 1;
+  text-align: center;
+}

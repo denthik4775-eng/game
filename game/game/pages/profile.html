@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Личный кабинет</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="icon" href="../images/icon.ico" type="image/x-icon">
+</head>
+<body class="light-theme">
+  <header>
+    <div class="header-container">
+      <!-- Логотип или изображение -->
+      <div class="logo">
+        <img src="../images/logo.png" alt="Логотип клуба" class="logo-image">
+      </div>
+      <!-- Название и навигация -->
+      <div class="header-content">
+        <h1>Компьютерные клубы "Шрек"</h1>
+        <nav>
+          <ul class="navigation">
+            <li><a href="main.html">Главная</a></li>
+            <li><a href="tariffs.html">Тарифы</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="login.html">Выйти</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Кнопка смены темы -->
+      <button id="theme-toggle">Сменить тему</button>
+    </div>
+  </header>
+  <div class="container">
+    <h2>Добро пожаловать, <span id="username-display">Пользователь</span>!</h2>
+    <div class="profile-info">
+      <img src="../images/shrek-avatar.png" alt="Аватарка" class="avatar" id="user-avatar">
+      <p><strong>Количество проведённых часов:</strong> <span id="hours-played">0</span></p>
+      <p><strong>Ваш тариф:</strong> <span id="user-tariff">Стандарт</span></p>
+      <p><strong>Дополнительная информация:</strong> <span id="user-info">Информация отсутствует</span></p>
+    </div>
+  </div>
+  <footer>
+    <p>© 2025 Компьютерные клубы "Шрек"</p>
+  </footer>
+  <script src="../scripts/theme.js"></script>
+  <script src="../scripts/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тарифы - Компьютерные клубы Шрек</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="icon" href="../images/icon.ico" type="image/x-icon">
+</head>
+<body class="light-theme">
+  <header>
+    <div class="header-container">
+      <!-- Логотип или изображение -->
+      <div class="logo">
+        <img src="../images/logo.png" alt="Логотип клуба" class="logo-image">
+      </div>
+      <!-- Название и навигация -->
+      <div class="header-content">
+        <h1>Компьютерные клубы "Шрек"</h1>
+        <nav>
+          <ul class="navigation">
+            <li><a href="main.html">Главная</a></li>
+            <li><a href="tariffs.html">Тарифы</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="login.html">Авторизация</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Кнопка смены темы -->
+      <button id="theme-toggle">Сменить тему</button>
+    </div>
+  </header>
+  
+  <div class="container">
+    <h2>Тарифы и комнаты</h2>
+
+    <!-- Тариф Стандарт -->
+    <div class="tariff">
+      <h3>Стандарт</h3>
+      <img src="../images/standard.png" alt="Тариф Стандарт" class="tariff-image">
+      <p>Мощные игровые компьютеры, удобные кресла, доступ к интернету. Идеально подходит для повседневных игр и работы.</p>
+      <button class="book-button" data-tariff="Стандарт">Забронировать</button>
+    </div>
+
+    <!-- Тариф Премиум -->
+    <div class="tariff">
+      <h3>Премиум</h3>
+      <img src="../images/premium.png" alt="Тариф Премиум" class="tariff-image">
+      <p>Игровые ПК с топовыми видеокартами, отдельные комнаты для компаний. Подходит для профессиональных геймеров и турниров.</p>
+      <button class="book-button" data-tariff="Премиум">Забронировать</button>
+    </div>
+
+    <!-- Тариф Особая компания -->
+    <div class="tariff">
+      <h3>Особая компания</h3>
+      <img src="../images/vr.png" alt="Тариф Особая компания" class="tariff-image">
+      <p>VR-очки, консоли XBOX, уникальный дизайн в стиле Шрека. Идеально для вечеринок и полного погружения в виртуальную реальность.</p>
+      <button class="book-button" data-tariff="Особая компания">Забронировать</button>
+    </div>
+  </div>
+
+  <!-- Затемнение фона -->
+  <div id="modal-overlay" class="modal-overlay"></div>
+
+  <!-- Модальное окно для бронирования -->
+  <div id="booking-modal" class="modal">
+    <span class="close-modal" id="close-booking-modal">&times;</span>
+    <h3>Бронирование</h3>
+    <form id="booking-form">
+      <label for="name">Имя пользователя:</label>
+      <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+
+      <label for="phone">Номер телефона:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Введите ваш номер телефона" required>
+
+      <label for="time">Время бронирования:</label>
+      <input type="time" id="time" name="time" required>
+
+      <label for="tariff">Тариф:</label>
+      <input type="text" id="tariff" name="tariff" readonly>
+
+      <button type="submit">Подтвердить бронирование</button>
+    </form>
+  </div>
+
+  <!-- Модальное окно подтверждения -->
+  <div id="success-modal" class="modal">
+    <span class="close-modal" id="close-success-modal">&times;</span>
+    <h3>Бронирование успешно!</h3>
+    <p>Ваше бронирование было успешно оформлено. Спасибо, что выбрали нас!</p>
+  </div>
+
+  <footer>
+    <p>Есть вопросы? Напишите нам:</p>
+    <form action="../send_mail.php" method="POST">
+      <input type="email" name="email" placeholder="Ваш email" required>
+      <textarea name="message" placeholder="Ваш вопрос" required></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+    <p>© 2025 Компьютерные клубы "Шрек"</p>
+  </footer>
+
+  <script src="../scripts/theme.js"></script>
+  <script src="../scripts/tariffs.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Авторизация</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="icon" href="../images/icon.ico" type="image/x-icon">
+</head>
+<body class="light-theme">
+
+  <header>
+    <div class="header-container">
+      <!-- Логотип или изображение -->
+      <div class="logo">
+        <img src="../images/logo.png" alt="Логотип клуба" class="logo-image">
+      </div>
+      <!-- Название и навигация -->
+      <div class="header-content">
+        <h1>Авторизация</h1>
+      </div>
+      <!-- Кнопка смены темы -->
+      <button id="theme-toggle">Сменить тему</button>
+    </div>
+  </header>
+
+  <form id="loginForm">
+    <div class="form-group">
+      <label for="username">Имя пользователя</label>
+      <input type="text" id="username" name="username" placeholder="Введите имя пользователя" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Пароль</label>
+      <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+    </div>
+    <button type="submit" class="login-button">Войти</button>
+    <p id="errorMessage" class="error-message"></p>
+  </form>
+
+  <footer class="login-footer">
+    <p>© 2025 Компьютерные клубы "Шрек"</p>
+  </footer>
+
+  <script src="../scripts/theme.js"></script>
+  <script src="../scripts/checkUser.js"></script>
+</body>
+</html>
